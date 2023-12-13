@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj": {}
+    "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj": {}
   },
   "projects": {
-    "D:\\C#\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj": {
+    "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
+        "projectUniqueName": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
         "projectName": "BulkyBookWeb",
-        "projectPath": "D:\\C#\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
+        "projectPath": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
         "packagesPath": "C:\\Users\\Andrija\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\BulkyBook\\BulkyBookWeb\\obj\\",
+        "outputPath": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages",

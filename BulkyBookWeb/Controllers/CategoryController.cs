@@ -109,7 +109,7 @@ namespace BulkyBookWeb.Controllers
                 _db.SaveChanges();
             TempData["success"] = "Category deleted succesfully!";
             return RedirectToAction("Index");
-            
+            /*Ninko Miletic*/
          
         }
     }
