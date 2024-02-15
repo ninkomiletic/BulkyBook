@@ -11,7 +11,7 @@ namespace BulkyBookWeb.Data
 
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<CoverType> CoverTypes { get; set; } = default(DbSet<CoverType>);
+       public DbSet<CoverType> CoverTypes { get; set; }
        
     }
 }
