@@ -1,0 +1,11 @@
+D:\C#\Git\BulkyBook\BulkyBook.Utility\bin\Debug\net6.0\BulkyBook.Utility.deps.json
+D:\C#\Git\BulkyBook\BulkyBook.Utility\bin\Debug\net6.0\BulkyBook.Utility.dll
+D:\C#\Git\BulkyBook\BulkyBook.Utility\bin\Debug\net6.0\BulkyBook.Utility.pdb
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\BulkyBook.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\BulkyBook.Utility.AssemblyInfoInputs.cache
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\BulkyBook.Utility.AssemblyInfo.cs
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\BulkyBook.Utility.csproj.CoreCompileInputs.cache
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\BulkyBook.Utility.dll
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\refint\BulkyBook.Utility.dll
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\BulkyBook.Utility.pdb
+D:\C#\Git\BulkyBook\BulkyBook.Utility\obj\Debug\net6.0\ref\BulkyBook.Utility.dll

@@ -4,8 +4,8 @@ using BulkyBookWeb.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 
-namespace BulkyBookWeb.Controllers
-{
+namespace BulkyBookWeb.Areas.Admin.Controllers;
+[Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -52,13 +52,14 @@ namespace BulkyBookWeb.Controllers
             {
                 return NotFound();
             }
-      /*      var categoryFromDb = _db.Categories.Find(id);*/
+            /*      var categoryFromDb = _db.Categories.Find(id);*/
             var categoryFromDbFirst = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
-           /* var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);*/
-            if (categoryFromDbFirst  == null) {
+            /* var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);*/
+            if (categoryFromDbFirst == null)
+            {
                 return NotFound();
-             }
-            
+            }
+
             return View(categoryFromDbFirst);
         }
         //EDIT
@@ -96,7 +97,7 @@ namespace BulkyBookWeb.Controllers
             return View(categoryFromDbFirst);
         }
         //POST
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeletePOST(int? id)
         {
@@ -107,11 +108,11 @@ namespace BulkyBookWeb.Controllers
             }
 
             _unitOfWork.Category.Remove(obj);
-                _unitOfWork.Save();
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted succesfully!";
             return RedirectToAction("Index");
             /*Ninko Miletic*/
-         
+
         }
     }
 }
