@@ -1,8 +1,10 @@
 ﻿using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
+using BulkyBook.Models.ViewModels;
 using BulkyBookWeb.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BulkyBookWeb.Areas.Admin.Controllers;
 [Area("Admin")]
@@ -22,58 +24,47 @@ namespace BulkyBookWeb.Areas.Admin.Controllers;
             IEnumerable<Category> obj = _unitOfWork.Category.GetAll();
             return View(obj);
         }
-        //GET
-        public IActionResult Create()
+    //GET
+        public IActionResult Upsert(int? id)
         {
-            return View();
+        ProductVM productVM = new()
+        {
+            Product = new(),
+            CategoryList = _unitOfWork.Category.GetAll().Select(i=>new SelectListItem
+            {
+                Text = i.Name,
+                Value=i.Id.ToString()
+            }),
+            CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+            {
+                Text = i.Name,
+                Value = i.Id.ToString()
+            }),
+        };
+        if (id == null || id == 0)
+        {
+            //create product
+            /*ViewBag.Title = CategoryList;
+            ViewData["Title"] = CoverTypeList;*/
+            return View(productVM);
         }
-        //POST
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Category obj)
-        {
-            if (obj.Name == obj.DisplayOrder.ToString())
-            {
-                ModelState.AddModelError("DisplayOrder ", "The DisplayOrder cannot exactly match the Name.");
-            }
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Category.Add(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Category created succesfully!";
-                return RedirectToAction("Index");
-            }
-            return View(obj);
+        else
+        { 
+            //update product
+
         }
 
-        public IActionResult Edit(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            /*      var categoryFromDb = _db.Categories.Find(id);*/
-            var categoryFromDbFirst = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
-            /* var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);*/
-            if (categoryFromDbFirst == null)
-            {
-                return NotFound();
-            }
-
-            return View(categoryFromDbFirst);
+            return View(productVM);
         }
         //EDIT
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Category obj)
+        public IActionResult Upsert(ProductVM obj, IFormFile file)
         {
-            if (obj.Name == obj.DisplayOrder.ToString())
-            {
-                ModelState.AddModelError("DisplayOrder ", "The DisplayOrder cannot exactly match the Name.");
-            }
+           
             if (ModelState.IsValid)
             {
-                _unitOfWork.Category.Update(obj);
+               /* _unitOfWork.Category.Update(obj);*/
                 _unitOfWork.Save();
                 TempData["success"] = "Category edited succesfully!";
                 return RedirectToAction("Index");
