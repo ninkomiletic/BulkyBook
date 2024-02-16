@@ -1,8 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BulkyBook.DataAccess",
-    "\\BulkyBook.DataAccess\\Data",
+    "\\BulkyBook.Models",
     "\\BulkyBookWeb",
     "\\BulkyBookWeb\\Areas",
     "\\BulkyBookWeb\\Areas\\Admin",
@@ -12,6 +11,6 @@
     "\\BulkyBookWeb\\Views",
     "\\BulkyBookWeb\\Views\\Shared"
   ],
-  "SelectedNode": "\\BulkyBookWeb\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\BulkyBook.Models",
   "PreviewInSolutionExplorer": false
 }
