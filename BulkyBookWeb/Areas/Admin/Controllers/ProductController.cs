@@ -8,32 +8,34 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BulkyBookWeb.Areas.Admin.Controllers;
 [Area("Admin")]
-    public class ProductController : Controller
+public class ProductController : Controller
+{
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly IWebHostEnvironment _hostEnviroment;
+
+
+    public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
     {
-        private readonly IUnitOfWork _unitOfWork;
+        _unitOfWork = unitOfWork;
+        _hostEnviroment = hostEnvironment;
 
-        public ProductController(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-
-        }
+    }
 
 
-        public IActionResult Index()
-        {
-            IEnumerable<Category> obj = _unitOfWork.Category.GetAll();
-            return View(obj);
-        }
+    public IActionResult Index()
+    {
+        return View();
+    }
     //GET
-        public IActionResult Upsert(int? id)
-        {
+    public IActionResult Upsert(int? id)
+    {
         ProductVM productVM = new()
         {
             Product = new(),
-            CategoryList = _unitOfWork.Category.GetAll().Select(i=>new SelectListItem
+            CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
             {
                 Text = i.Name,
-                Value=i.Id.ToString()
+                Value = i.Id.ToString()
             }),
             CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
             {
@@ -49,61 +51,86 @@ namespace BulkyBookWeb.Areas.Admin.Controllers;
             return View(productVM);
         }
         else
-        { 
+        {
             //update product
 
         }
 
-            return View(productVM);
-        }
-        //EDIT
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Upsert(ProductVM obj, IFormFile file)
-        {
-           
-            if (ModelState.IsValid)
-            {
-               /* _unitOfWork.Category.Update(obj);*/
-                _unitOfWork.Save();
-                TempData["success"] = "Category edited succesfully!";
-                return RedirectToAction("Index");
-            }
-            return View(obj);
-        }
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            /*var categoryFromDb = _db.Categories.Find(id);*/
-            var categoryFromDbFirst = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
-            /*var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);*/
-            if (categoryFromDbFirst == null)
-            {
-                return NotFound();
-            }
-
-            return View(categoryFromDbFirst);
-        }
-        //POST
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeletePOST(int? id)
-        {
-            var obj = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-
-            _unitOfWork.Category.Remove(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Category deleted succesfully!";
-            return RedirectToAction("Index");
-            /*Ninko Miletic*/
-
-        }
+        return View(productVM);
     }
+    //EDIT
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Upsert(ProductVM obj, IFormFile? file)
+    {
+
+        if (ModelState.IsValid)
+        {
+            string wwwRootPath = _hostEnviroment.WebRootPath;
+            if (file != null)
+            {
+                string fileName = Guid.NewGuid().ToString();
+                var uploads = Path.Combine(wwwRootPath, @"imgs\products");
+                var extension = Path.GetExtension(file.FileName);
+
+                using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                {
+                    file.CopyTo(fileStreams);
+                }
+                obj.Product.ImageUrl = @"\imgs\products\" + fileName + extension;
+            }
+            _unitOfWork.Product.Add(obj.Product);
+            _unitOfWork.Save();
+            TempData["success"] = "Product created succesfully!";
+            return RedirectToAction("Index");
+        }
+        return View(obj);
+    }
+    public IActionResult Delete(int? id)
+    {
+        if (id == null || id == 0)
+        {
+            return NotFound();
+        }
+        /*var categoryFromDb = _db.Categories.Find(id);*/
+        var categoryFromDbFirst = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
+        /*var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);*/
+        if (categoryFromDbFirst == null)
+        {
+            return NotFound();
+        }
+
+        return View(categoryFromDbFirst);
+    }
+    //POST
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public IActionResult DeletePOST(int? id)
+    {
+        var obj = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
+        if (obj == null)
+        {
+            return NotFound();
+        }
+
+        _unitOfWork.Category.Remove(obj);
+        _unitOfWork.Save();
+        TempData["success"] = "Category deleted succesfully!";
+        return RedirectToAction("Index");
+        /*Ninko Miletic*/
+
+    }
+
+
+
+    #region API CALLS
+    [HttpGet]
+    public IActionResult GetAll() 
+    {
+        var productList = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
+        return Json(new { data = productList });
+    }
+
+    #endregion
+}
 
