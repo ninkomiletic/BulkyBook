@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\7723502d-7ffe-40cb-85aa-5c2da331ab62.JPG",
+      "PackagePath": "staticwebassets\\imgs\\products\\7723502d-7ffe-40cb-85aa-5c2da331ab62.JPG"
+    },
+    {
       "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\959b02e3-a1d1-48e3-9d1d-4fe26daab1ec.png",
       "PackagePath": "staticwebassets\\imgs\\products\\959b02e3-a1d1-48e3-9d1d-4fe26daab1ec.png"
     },
