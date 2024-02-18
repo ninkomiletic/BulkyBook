@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\imgs\\products\\959b02e3-a1d1-48e3-9d1d-4fe26daab1ec.png"
     },
     {
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\company.js",
+      "PackagePath": "staticwebassets\\js\\company.js"
+    },
+    {
       "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
