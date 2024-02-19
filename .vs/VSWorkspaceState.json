@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\BulkyBook.Models",
+    "\\BulkyBook.Models\\ViewModels",
     "\\BulkyBookWeb",
     "\\BulkyBookWeb\\Areas",
-    "\\BulkyBookWeb\\Areas\\Admin",
-    "\\BulkyBookWeb\\Areas\\Admin\\Controllers",
     "\\BulkyBookWeb\\Areas\\Identity",
     "\\BulkyBookWeb\\Areas\\Identity\\Pages",
     "\\BulkyBookWeb\\Areas\\Identity\\Pages\\Account",
     "\\BulkyBookWeb\\wwwroot",
     "\\BulkyBookWeb\\wwwroot\\js"
   ],
-  "SelectedNode": "\\BulkyBookWeb\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+  "SelectedNode": "\\BulkyBook.Models\\ViewModels\\ShoppingCart.cs",
   "PreviewInSolutionExplorer": false
 }

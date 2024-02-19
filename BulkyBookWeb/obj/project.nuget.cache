@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e0uKwCkvS0FQ8Kf7RSzvZ3PZyr8GioMyiTvG8i3mHbY27LiHI+AmrRY9JFBjbg79nUt6JWyUK/eHt4v5OEKWpQ==",
+  "dgSpecHash": "EoF3akTHdZmLn1lr3X2o+XMAfkMaQlUOU6ph/hzSpvxq1awCKtlrMBoLSeQJFw8zUzfagmOOKFdtkCf9aH3haw==",
   "success": true,
   "projectFilePath": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
   "expectedPackageFiles": [
@@ -195,6 +195,7 @@
     "C:\\Users\\Andrija\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
     "C:\\Users\\Andrija\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\Andrija\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\Andrija\\.nuget\\packages\\stripe.net\\43.15.0\\stripe.net.43.15.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Andrija\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Andrija\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
