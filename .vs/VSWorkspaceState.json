@@ -5,14 +5,12 @@
     "\\BulkyBookWeb\\Areas",
     "\\BulkyBookWeb\\Areas\\Admin",
     "\\BulkyBookWeb\\Areas\\Admin\\Controllers",
-    "\\BulkyBookWeb\\Areas\\Customer",
-    "\\BulkyBookWeb\\Areas\\Customer\\Views",
-    "\\BulkyBookWeb\\Areas\\Customer\\Views\\Home",
-    "\\BulkyBookWeb\\Views",
-    "\\BulkyBookWeb\\Views\\Shared",
+    "\\BulkyBookWeb\\Areas\\Identity",
+    "\\BulkyBookWeb\\Areas\\Identity\\Pages",
+    "\\BulkyBookWeb\\Areas\\Identity\\Pages\\Account",
     "\\BulkyBookWeb\\wwwroot",
     "\\BulkyBookWeb\\wwwroot\\js"
   ],
-  "SelectedNode": "\\BulkyBook.sln",
+  "SelectedNode": "\\BulkyBookWeb\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }
