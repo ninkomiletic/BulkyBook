@@ -1129,3 +1129,4 @@ D:\C#\Git\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Extensions.Identity.
 D:\C#\Git\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 D:\C#\Git\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.dll
 D:\C#\Git\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.pdb
+D:\C#\Git\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Stripe.net.dll
