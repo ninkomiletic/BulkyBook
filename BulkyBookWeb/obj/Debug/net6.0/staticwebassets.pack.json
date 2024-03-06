@@ -17,12 +17,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\7723502d-7ffe-40cb-85aa-5c2da331ab62.JPG",
-      "PackagePath": "staticwebassets\\imgs\\products\\7723502d-7ffe-40cb-85aa-5c2da331ab62.JPG"
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\2e075c9e-2203-40c3-843f-b8ef997e7ccc.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\2e075c9e-2203-40c3-843f-b8ef997e7ccc.webp"
     },
     {
-      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\959b02e3-a1d1-48e3-9d1d-4fe26daab1ec.png",
-      "PackagePath": "staticwebassets\\imgs\\products\\959b02e3-a1d1-48e3-9d1d-4fe26daab1ec.png"
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\3b0c5c0a-62a5-492c-a2bf-870426442af1.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\3b0c5c0a-62a5-492c-a2bf-870426442af1.webp"
+    },
+    {
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\924f8484-a943-4e10-8d06-47b2087e82ff.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\924f8484-a943-4e10-8d06-47b2087e82ff.jpg"
+    },
+    {
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\c4a885e2-e233-4643-80a5-a30e9807867f.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\c4a885e2-e233-4643-80a5-a30e9807867f.webp"
+    },
+    {
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\download.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\download.jpg"
     },
     {
       "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\imgs\\products\\lawn_leaf.jpg",
@@ -31,6 +43,10 @@
     {
       "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\company.js",
       "PackagePath": "staticwebassets\\js\\company.js"
+    },
+    {
+      "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
     },
     {
       "Id": "D:\\C#\\Git\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\product.js",
