@@ -206,16 +206,16 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 			}
 			switch (status) {
 
-					case "pending":
-						orderHeaders = orderHeaders.Where(u => u.PaymentStatus == SD.PaymentStatusDelayedPayment);
-						break;
-					case "inprocess":
+                case "pending":
+                    orderHeaders = orderHeaders.Where(u => u.PaymentStatus == SD.PaymentStatusDelayedPayment);
+                    break;
+                case "inprocess":
 						orderHeaders = orderHeaders.Where(u => u.OrderStatus == SD.StatusInProcess); 
 						break;
-					case "completed":
-						orderHeaders = orderHeaders.Where(u => u.PaymentStatus == SD.StatusShipped);
-						break;
-					case "approved":
+                case "completed":
+                    orderHeaders = orderHeaders.Where(u => u.OrderStatus == SD.StatusShipped);
+                    break;
+                case "approved":
 						orderHeaders = orderHeaders.Where(u => u.PaymentStatus == SD.StatusApproved);
 						break;
 					default:
